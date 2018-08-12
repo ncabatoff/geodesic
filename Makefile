@@ -1,4 +1,4 @@
-export KOPS_CLUSTER_NAME ?= $(shell basename `pwd`)
+export KOPS_CLUSTER_NAME ?= dev.yttrium.cc
 export DOCKER_ORG ?= cloudposse
 export DOCKER_IMAGE ?= $(DOCKER_ORG)/$(KOPS_CLUSTER_NAME)
 export DOCKER_TAG ?= dev
