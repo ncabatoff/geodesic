@@ -22,3 +22,7 @@ RUN git config --global user.email "nick@yttrium.cc"
 COPY bin/ /root/
 
 WORKDIR /root
+
+RUN s3 fstab '${TF_BUCKET}' '/' '/secrets/tf'
+RUN s3 fstab 'cp-dev-yttrium' '/' '/logs'
+RUN s3 fstab 'config-bucket-529027041302' '/' '/config'
